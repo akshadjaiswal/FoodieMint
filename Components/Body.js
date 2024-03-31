@@ -6,10 +6,10 @@ const Body = () => {
         <div className="search"></div>
         <div className="res-container">
           {resList.map((restaurant) => (
-            <RestaurantCard key={restaurant.data} resData={restaurant} />
+            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
           ))}
         </div>
-      </div>
+      </div> 
     );
   };
   export default Body;
