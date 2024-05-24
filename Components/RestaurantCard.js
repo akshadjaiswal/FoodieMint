@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
     avgRating,
     costForTwo,
     deliveryTime,
-  } = resData?.data;
+  } = resData?.info;
   return (
     <div className="res-card" style={styleCard}>
       <img

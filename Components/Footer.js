@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div class="footer">
+      <div className="footer">
         <p>
           Created by{" "}
           <a href="https://akshadjaiswal-website.netlify.app/" target="_blank">
