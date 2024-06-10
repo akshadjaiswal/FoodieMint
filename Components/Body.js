@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 const Body = () => {
   const [listOfRestaurants, setFilteredList] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -19,12 +20,34 @@ const Body = () => {
     );
   };
 
-  if (listOfRestaurants.length === 0) {
-    return <Shimmer />;
-  }
-  return (
+  // if (listOfRestaurants.length === 0) {
+  //   return <Shimmer />;
+  // }
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
+        <div className="Search">
+          <input
+            type="text"
+            className="Search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              const filteredRestaurants = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredList(filteredRestaurants)
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
