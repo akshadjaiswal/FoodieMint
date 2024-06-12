@@ -3,45 +3,44 @@ import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
-//Planning
-/**
- * 1) Header
- *  - Log
- *  - Nav Items
- * 2)Body
- *  - Search
- *  - RestaurantContainer
- *      - RestaurantCard
- *        - Img
- *        - Name of Res, Star Ratings, Cuisine, etc
- * 3)Footer
- *  - Copyrights
- *  - Link
- *  - Address
- *  - Contact
- */
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Cart from "./Components/Cart";
+import Error from "./Components/Error";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const styleCard = {
-  backgroundColor: "#D3D3D3",
-};
 
-const resObj = {
-  name: "Aaradhana Foods",
-  cuisines: ["Kathiawadi Thali", "Traditional", "Sweet", "Spicy"],
-  avgRating: "4.6",
-  costForTwo: 40000,
-  deliveryTime: 125,
-};
+
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
       <Body />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/contact",
+    element: <Contact />
+  },
+  {
+    path: "/cart",
+    element: <Cart />
+  }
+])
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
