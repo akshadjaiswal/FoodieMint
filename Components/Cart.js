@@ -1,8 +1,8 @@
 const Cart = () => {
   return (
     <div className="Cart-div">
-      <h1>Cart</h1>
-      <h2>This is cart section of FoodieMint web app</h2>
+      <h1>Cart section</h1>
+      <h2>This is Cart Section of FoodieMint app</h2>
     </div>
   );
 };
