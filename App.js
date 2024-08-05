@@ -9,7 +9,7 @@ import Cart from "./Components/Cart";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import Grocery from "./Components/Grocery";
+
 
 //chunking
 //code splitting
