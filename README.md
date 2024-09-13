@@ -10,6 +10,7 @@
 - Dynamic Restaurant Menu
 - Profile Section
 - Custom Hooks
+- React-redux and redux toolkit use
 - Configured and Designed with [Tailwind CSS](https://tailwindcss.com)
   
 ## Instruction before running the project
