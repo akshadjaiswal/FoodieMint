@@ -14,7 +14,7 @@ class About extends React.Component {
     // console.log("Parent Component");
     return (
       <div className="About-div justify-center">
-        <h1>About Team</h1>
+        <h1>About Dev Team</h1>
         <UserClass name={"Akshad"} location={"Pune"} />
       </div>
     );
