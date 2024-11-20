@@ -16,7 +16,9 @@
 - React testing library (jest)
   
 ## Instruction before running the project
+
 - If you are running it locallly or from [hosted](https://foodiemint.netlify.app/) link make sure you have installed  [Allow CORS](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en) chrome extension as it fetches the live data from swiggy's API.
+
 - As i am still working on this project i will fix this issue soo 🛠️
 
 ## ✨ Show your support :
